@@ -513,14 +513,14 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 69%;
 }
 
-.im_dialogs_col_wrap,
+/*.im_dialogs_col_wrap,
 .im_history_col_wrap {
-  -webkit-transition: .7s all cubic-bezier(.3,.53,.26,.82);
-     -moz-transition: .7s all cubic-bezier(.3,.53,.26,.82);
-      -ms-transition: .7s all cubic-bezier(.3,.53,.26,.82);
-       -o-transition: .7s all cubic-bezier(.3,.53,.26,.82);
-          transition: .7s all cubic-bezier(.3,.53,.26,.82);
-}
+  -webkit-transition: .2s all cubic-bezier(.3,.53,.26,.82);
+     -moz-transition: .2s all cubic-bezier(.3,.53,.26,.82);
+      -ms-transition: .2s all cubic-bezier(.3,.53,.26,.82);
+       -o-transition: .2s all cubic-bezier(.3,.53,.26,.82);
+          transition: .2s all cubic-bezier(.3,.53,.26,.82);
+}*/
 
 .im_page_split_min_dialogs .im_history_col_wrap {
   width: 92%; /* if `calc` isnt supported 8*/
@@ -530,7 +530,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .im_page_split_min_dialogs .im_dialogs_col_wrap {
   width: 8%;
   width: calc( 80px );
-    
+
 }
 
 
@@ -559,16 +559,22 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .im_dialogs_col_resize_btn {
+  background: #E9EBED;
   height: 34px;
   width: 14px;
   padding: 0;
-  
+
   position: absolute;
   top: 50%;
   margin-top: -17px; /* 34/2 */
-  right: -7px; /* 14/2 */
-  
+  right: -16px; /* 14/2 */
+
   z-index: 10;
+  border-radius: 0 3px 3px 0;
+  outline: 0 !important;
+}
+.im_dialogs_col_resize_btn:hover {
+  background: #A5B1B9;
 }
 
 .im_dialogs_panel {
@@ -783,10 +789,11 @@ a.im_dialog:hover .im_dialog_date {
 }
 
 .im_page_split_min_dialogs a.im_dialog .im_dialog_date {
-    background-color: rgba(0,0,0,0.3);
-    width: 40px;
-    color: #cce;
-    text-align: center;
+  display: none;
+  background-color: rgba(0,0,0,0.3);
+  width: 40px;
+  color: #cce;
+  text-align: center;
 }
 
 .im_page_split_min_dialogs a.im_dialog:hover .im_dialog_date {
@@ -795,11 +802,11 @@ a.im_dialog:hover .im_dialog_date {
 
 .im_page_split_min_dialogs .im_dialog_unread,
 .im_page_split_min_dialogs .im_dialog_badge {
-    margin-top: 10px;
-    margin-right: -3px;
+    margin-top: 27px;
+    margin-right: -6px;
 }
 .im_page_split_min_dialogs .im_dialog_unread {
-    margin-top: 15px;
+    margin-top: 33px;
     width: 10px;
     height: 10px;
 }
@@ -2515,7 +2522,7 @@ a.contacts_modal_contact:hover .contacts_modal_contact_status {
     right: 0;
     left: auto;
   }
-  
+
   .im_dialogs_col_resize_btn {
       display: none;
   }
