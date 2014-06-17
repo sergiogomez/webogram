@@ -6,7 +6,7 @@ var util = require('util'),
     url = require('url'),
     events = require('events');
 
-var DEFAULT_PORT = 80;
+var DEFAULT_PORT = 8000;
 var DEFAULT_HOST = '0.0.0.0';
 
 function main(argv) {
