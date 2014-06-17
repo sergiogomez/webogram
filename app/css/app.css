@@ -2,7 +2,7 @@
 
 html {
   display: none;
-  background: #dee4e9 url(../img/bg_tile.png) 0 0 repeat;
+  background: #dee4e9 none;
   overflow: visible;
   /*background-size: 300px 468px;*/
 }
